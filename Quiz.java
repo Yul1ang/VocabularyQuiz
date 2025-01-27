@@ -36,7 +36,6 @@ public class Quiz {
 	private static void loadVocabulary() throws IOException {
 		BufferedReader ptrv = new BufferedReader(new FileReader(VOCABULARY_FILE));
 		BufferedReader ptrf = new BufferedReader(new FileReader(FORGETTING_FILE));
-		BufferedWriter ptwf = new BufferedWriter(new FileWriter(FORGETTING_FILE));
 
 		String line = null;
 		while ((line = ptrf.readLine()) != null) {
@@ -66,7 +65,6 @@ public class Quiz {
 
 		ptrv.close();
 		ptrf.close();
-		ptwf.close();
 	}
 
 	private static void startQuiz() throws IOException {
